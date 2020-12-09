@@ -1,0 +1,30 @@
+using UnityEngine;
+using System.Collections;
+
+public class TriggerCube : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Cube Enter:" + other.gameObject.name);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Cube Exit:" + other.gameObject.name);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Cube Stay:" + other.gameObject.name);
+    }
+}
