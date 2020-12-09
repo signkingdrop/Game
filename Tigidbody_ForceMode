@@ -1,0 +1,30 @@
+using UnityEngine;
+using System.Collections;
+
+public class ForceTest : MonoBehaviour {
+
+    private Rigidbody m_Tigidbody;
+
+	// Use this for initialization
+	void Start () {
+
+        m_Tigidbody = gameObject.GetComponent<Rigidbody>();
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        // m_Tigidbody.AddForce(Vector3.forward, ForceMode.Acceleration);
+
+        
+	
+	}
+    void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Z))
+        {
+            m_Tigidbody.AddRelativeForce(Vector3.forward * 5, ForceMode.Force);
+        }
+
+    }
+}
